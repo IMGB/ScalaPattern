@@ -1,0 +1,19 @@
+apply plugin: 'scala'
+apply plugin: 'java'
+
+repositories {
+    // NOTE: You should declare only repositories that you need here
+    mavenLocal()
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.scala-lang:scala-library:2.11.6")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
