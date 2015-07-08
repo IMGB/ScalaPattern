@@ -1,16 +1,19 @@
-package imgb.pattern.resources.resource
+package imgb.pattern.resources.manager
+
+import imgb.pattern.resources.resource.Resource
+
 
 /**
  * Created by xyz on 6/29/15.
  */
-trait AcquireReflectionManager extends ProxyResourceManager{
+trait AcquireReflectionManager[R<:Resource] extends ProxyResourceManager[R]{
   
   protected def beforeAcquire(resourceManager: ManagerType)
   protected def afterAcquire(resourceManager: ManagerType)
 
-  abstract override def acquire(): ResourceType = {
+  abstract override def acquire():R  = {
     beforeAcquire(resourceManager)
-    val resource:ResourceType = super.acquire()
+    val resource:R = super.acquire()
     afterAcquire(resourceManager)
     resource
   }

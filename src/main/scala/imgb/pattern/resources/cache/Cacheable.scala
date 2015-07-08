@@ -1,4 +1,4 @@
-package imgb.pattern.resources
+package imgb.pattern.resources.cache
 
 /**
  * Created by xyz on 7/8/15.
