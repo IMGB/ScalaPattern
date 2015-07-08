@@ -1,8 +1,8 @@
 package imgb.pattern.resources.center
 
+import imgb.pattern.resources.center.tag.ResourceTag
 import imgb.pattern.resources.manager.ResourceManager
 import imgb.pattern.resources.resource.Resource
-import imgb.pattern.resources.resource.tag.ResourceTag
 
 /**
  * Created by xyz on 6/29/15.
